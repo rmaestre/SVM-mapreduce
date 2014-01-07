@@ -12,7 +12,7 @@ support_vectors_ <- read.table(file.path(getwd(),'data/svm_models',sprintf("%s%s
 dual_coef_ <- read.table(file.path(getwd(),'data/svm_models',sprintf("%s%s", class,'_model_dual_coef.tsv')), header=FALSE, sep="\t")
 
 # Get a sample vector to test it
-vector_index <- 31
+vector_index <- 195
 vector <- X_data[vector_index,]
 
 # Get value from decision function (from support vector and dual coef)
