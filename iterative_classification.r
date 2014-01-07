@@ -18,7 +18,7 @@ vector <- X_data[vector_index,]
 # Get value from decision function (from support vector and dual coef)
 value <- 0
 for (i in 2:dim(support_vectors_)[1]) { 
-    value <- value + dual_coef_[i] * sqrt(sum((vector - support_vectors_[i,]) ^ 2))
+    value <- value + dual_coef_[i] * norm(as.matrix(vector - support_vectors_[i,]))
 }
 
 # Print decision function value
